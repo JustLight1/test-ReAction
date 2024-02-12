@@ -5,6 +5,8 @@ from blogs.models import Blog
 
 
 class BlogSerializer(serializers.ModelSerializer):
+    """Сериализатор для модели Blog."""
+
     user = SlugRelatedField(slug_field='username', read_only=True)
 
     class Meta:
